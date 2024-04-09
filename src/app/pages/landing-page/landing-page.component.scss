@@ -1,0 +1,58 @@
+@import "../../../assets/styles/variables.scss";
+
+.navbar {
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  scroll-behavior: smooth;
+
+  .navbar-logo {
+    width: auto;
+  }
+
+  .navbar-links {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .link {
+      margin: 0 1rem;
+      text-align: center;
+      a {
+        color: $black;
+        text-decoration: none;
+        font-family: "GT Walsheim Pro";
+        font-size: 20px;
+        line-height: 12px;
+        text-align: center;
+        &:hover {
+          color: $primary;
+        }
+
+        &.active {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.hero-bg {
+  background-image: url("../../../assets/images/hero-bg-img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: max-content;
+  margin: 1rem 0;
+
+  .hero-content {
+    display: flex;
+    flex-direction: "row";
+    justify-content: space-between;
+    align-items: center;
+  }
+}

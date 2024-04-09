@@ -1,1 +1,210 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/variables.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  // overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  width: 80% !important; /* Make the container fill the width of its parent */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 1rem; /* Add some padding to the container */
+  box-sizing: border-box; /* Include padding and border in the container's total width */
+}
+
+/*app button style*/
+.btn {
+  width: auto;
+  height: auto;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &.btn-pill {
+    border-radius: 50px !important;
+    background-color: $primary-light;
+    color: $primary;
+    border: none;
+  }
+
+  &.btn-primary {
+    background-color: $primary;
+    color: $white;
+    border: 1px solid $primary;
+
+    &:hover {
+      background-color: $white;
+      color: $primary;
+      border: 1px solid $primary;
+      transform: translateX(2px) ease-in-out;
+      animation-duration: 0.5s;
+    }
+  }
+  &.btn-warm {
+    background-color: $yellow;
+    color: $white;
+    border: 1px solid $yellow;
+
+    &:hover {
+      background-color: $white;
+      color: $yellow;
+      border: 1px solid $yellow;
+      transform: translateX(2px) ease-in-out;
+      animation-duration: 0.5s;
+    }
+  }
+}
+
+/*background styles*/
+.bg-primary {
+  background-color: $primary;
+}
+.bg-warm {
+  background-color: $yellow;
+}
+.bg-light {
+  background-color: $white;
+}
+
+/*text color styles*/
+.text-primary {
+  color: $primary;
+}
+.text-warm {
+  color: $yellow;
+}
+.text-light {
+  color: $white;
+}
+.text-gray {
+  color: $gray;
+}
+.text-lg {
+  font-family: "GT Walsheim Pro";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60px;
+  text-align: left;
+}
+.text-sm {
+  font-family: "Proxima Nova";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+}
+
+/*card app styles*/
+
+.card {
+  all: unset;
+  background-color: $white;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 302px;
+  min-width: 278px;
+  display: flex;
+  flex-direction: column;
+
+  &.card-sm {
+    min-height: 200px;
+    min-width: 278px;
+  }
+
+  &.card-lg {
+    min-height: 400px;
+    width: "100%";
+    border-radius: 25px;
+  }
+
+  &.card-primary {
+    background-color: $primary;
+  }
+  &.card-light {
+    background-color: $white;
+  }
+  &.card-warm {
+    background-color: $yellow;
+  }
+  &.card-primary-light {
+    background-color: $primary-light;
+  }
+
+  .card-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+    // display: flex;
+    // justify-content: flex-start;
+  }
+
+  .card-title {
+    font-family: "GT Walsheim Pro";
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 27.48px;
+    text-align: left;
+  }
+
+  .card-text {
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: "row";
+  align-items: center;
+  // flex-wrap: wr  ap;
+
+  .evenly {
+    justify-content: space-evenly;
+  }
+  .between {
+    justify-content: space-between;
+  }
+  .around {
+    justify-content: space-around;
+  }
+  .start {
+    justify-content: flex-start;
+  }
+  .end {
+    justify-content: flex-end;
+  }
+}
