@@ -1,10 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./assets/styles/variables.scss";
+@import "./assets/styles/keyframes.scss";
 
 body {
   margin: 0;
   padding: 0;
-  // overflow-x: hidden;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
@@ -31,6 +32,19 @@ p {
   margin: 0;
 }
 
+.fade-up {
+  animation: fade-up 1s;
+}
+.fade-down {
+  animation: fade-down 1s;
+}
+.fade-in {
+  animation: fade-in 1s;
+}
+.fade-out {
+  animation: fade-out 1s;
+}
+
 .container {
   width: 80% !important; /* Make the container fill the width of its parent */
   margin: 0 auto; /* Center the container horizontally */
@@ -42,7 +56,7 @@ p {
 .btn {
   width: auto;
   height: auto;
-  padding: 8px 16px;
+  padding: 12px 20px;
   border-radius: 8px;
   text-align: center;
   font-weight: 700;
@@ -97,18 +111,38 @@ p {
   background-color: $white;
 }
 
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 2rem 0;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+
+.mx-1 {
+  margin: 0 1rem;
+}
+.mx-2 {
+  margin: 0 2rem;
+}
+.mx-3 {
+  margin: 0 3rem;
+}
+
 /*text color styles*/
 .text-primary {
-  color: $primary;
+  color: $primary !important;
 }
 .text-warm {
-  color: $yellow;
+  color: $yellow !important;
 }
 .text-light {
-  color: $white;
+  color: $white !important;
 }
 .text-gray {
-  color: $gray;
+  color: $gray !important;
 }
 .text-lg {
   font-family: "GT Walsheim Pro";
@@ -143,7 +177,8 @@ p {
   }
 
   &.card-lg {
-    min-height: 400px;
+    min-height: 500px;
+    height: max-content;
     width: "100%";
     border-radius: 25px;
   }
@@ -192,6 +227,9 @@ p {
   align-items: center;
   // flex-wrap: wr  ap;
 
+  .center {
+    justify-content: center;
+  }
   .evenly {
     justify-content: space-evenly;
   }
@@ -206,5 +244,11 @@ p {
   }
   .end {
     justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95% !important; /* Make the container fill the width of its parent */
   }
 }

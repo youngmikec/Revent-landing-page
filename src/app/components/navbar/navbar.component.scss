@@ -1,0 +1,161 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/keyframes.scss";
+
+// $breakpoint: 768px; // Define the breakpoint for smaller devices
+
+.navbar {
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  scroll-behavior: smooth;
+  margin-bottom: 2rem;
+
+  &.animate {
+    animation: fade-down 0.5s;
+  }
+
+  .navbar-logo {
+    width: auto;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .navbar-links {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .link {
+      margin: 0 1rem;
+      text-align: center;
+      a {
+        color: $black;
+        text-decoration: none;
+        font-family: "GT Walsheim Pro";
+        font-size: 20px;
+        line-height: 12px;
+        text-align: center;
+        &:hover {
+          color: $primary;
+        }
+
+        &.active {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-logo > img {
+    width: 60px;
+  }
+  .menu {
+    display: block !important;
+    i {
+      cursor: pointer;
+      color: $black;
+      font-size: 20px;
+    }
+    &:hover {
+      cursor: pointer;
+      color: $primary;
+    }
+  }
+  .navbar-links {
+    display: none !important;
+  }
+}
+
+// .navbar {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 10px;
+//   background-color: #333;
+//   color: #fff;
+
+//   .navbar-brand {
+//     display: flex;
+//     align-items: center;
+//     .navbar-logo {
+//       color: #fff;
+//       text-decoration: none;
+//       font-weight: bold;
+//       font-size: 1.2rem;
+//       margin-right: 20px;
+//     }
+//   }
+
+//   .navbar-nav {
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+//     display: flex;
+
+//     .nav-item {
+//       margin-right: 10px;
+//       &:last-child {
+//         margin-right: 0;
+//       }
+//       .nav-link {
+//         color: #fff;
+//         text-decoration: none;
+//         &:hover {
+//           text-decoration: underline;
+//         }
+//       }
+//     }
+//   }
+
+//   // Media query for smaller devices
+//   @media (max-width: $breakpoint) {
+//     .navbar-toggler {
+//       display: block;
+//       background: none;
+//       border: none;
+//       cursor: pointer;
+//     }
+
+//     .navbar-nav {
+//       display: none;
+//       flex-direction: column;
+//       position: absolute;
+//       top: 100%;
+//       left: 0;
+//       width: 100%;
+//       background-color: #333;
+//       padding: 10px;
+//       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+//     }
+
+//     .navbar-toggler-icon {
+//       display: block;
+//       width: 20px;
+//       height: 2px;
+//       background-color: #fff;
+//       &:before,
+//       &:after {
+//         content: "";
+//         display: block;
+//         width: 20px;
+//         height: 2px;
+//         background-color: #fff;
+//         margin-top: 4px;
+//       }
+//       &:after {
+//         margin-top: 4px;
+//       }
+//     }
+
+//     .navbar-toggler.collapsed + .navbar-nav {
+//       display: block;
+//     }
+//   }
+// }

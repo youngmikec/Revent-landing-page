@@ -1,58 +1,189 @@
 @import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/keyframes.scss";
 
-.navbar {
-  width: 100%;
-  padding: 10px 0px;
+.flex-layout {
+  display: flex;
+  flex-direction: "row";
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  // opacity: 0;
+  // transition: opacity 0.5s ease;
+
+  &.animate {
+    animation: fade-in 1s;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+
+    .content-header {
+      font-family: "GT Walsheim Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      color: $black;
+      margin-bottom: 1rem;
+      width: 60%;
+    }
+
+    .content-text {
+      width: 60%;
+      font-family: "Proxima Nova";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: $black;
+      margin: 1rem 0;
+    }
+  }
+
+  .flex-img-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+
+    .flex-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .button-section {
+    margin: 2rem 0;
+  }
+}
+
+.subscribe-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    text-align: center;
+  }
+
+  .input-section {
+    margin: 2rem auto;
+    width: 70%;
+
+    .input {
+      width: 100%;
+      height: 50px;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      border: 1px solid #d2dfff;
+      background-color: $white;
+      color: #001540;
+    }
+  }
+
+  .btn-section {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    width: 70%;
+  }
+
+  .subscribe-footer {
+    display: flex;
+  }
+}
+
+.companies {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  scroll-behavior: smooth;
+  margin: 4rem 0;
+  gap: 20px;
+  .logo {
+    width: 100%;
+  }
+}
 
-  .navbar-logo {
-    width: auto;
+@media screen and (max-width: 768px) {
+  .flex-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
-  .navbar-links {
-    width: auto;
+  .flex-img-section {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .flex-img {
+    width: 60%;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .content-header {
+    font-family: "GT Walsheim Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 48px;
+    color: $black;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .content-text {
+    width: 100%;
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+    margin: 1rem 0;
+  }
+
+  .companies {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    .link {
-      margin: 0 1rem;
-      text-align: center;
-      a {
-        color: $black;
-        text-decoration: none;
-        font-family: "GT Walsheim Pro";
-        font-size: 20px;
-        line-height: 12px;
-        text-align: center;
-        &:hover {
-          color: $primary;
-        }
-
-        &.active {
-          color: $primary;
-        }
-      }
+    margin: 4rem 0;
+    gap: 10px;
+    .logo {
+      width: 40px;
     }
   }
 }
 
-.hero-bg {
-  background-image: url("../../../assets/images/hero-bg-img.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: max-content;
-  margin: 1rem 0;
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $white;
+  margin: 0 0.3rem;
 
-  .hero-content {
-    display: flex;
-    flex-direction: "row";
-    justify-content: space-between;
-    align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.inactive {
+    background-color: $white;
+    opacity: 30%;
+  }
+
+  i {
+    color: $primary;
+    font-size: 30px;
   }
 }
