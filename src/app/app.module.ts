@@ -6,6 +6,9 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { ServiceCardComponent } from './components/service-card/service-card.component';
+import { FinServicesComponent } from './components/fin-services/fin-services.component';
+import { LatestNewsComponent } from './components/latest-news/latest-news.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +16,9 @@ import { HeroComponent } from './components/hero/hero.component';
     NavbarComponent,
     FooterComponent,
     HeroComponent,
+    ServiceCardComponent,
+    FinServicesComponent,
+    LatestNewsComponent,
     LandingPageComponent
   ],
   imports: [

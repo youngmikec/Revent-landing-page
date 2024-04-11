@@ -1,0 +1,214 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/keyframes.scss";
+
+.content-wrapper {
+  background: linear-gradient(180deg, #fafbfb00 10%, #7d97f414 58%);
+  width: 100%;
+  min-height: 600px;
+  max-height: max-content;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  padding: 2rem 0;
+}
+
+.flex-layout {
+  display: flex;
+  flex-direction: "row";
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  gap: 2rem;
+  // opacity: 0;
+  // transition: opacity 0.5s ease;
+
+  &.animate {
+    animation: fade-in 1s;
+  }
+
+  .content {
+    display: block;
+    width: 100%;
+    padding-top: 2rem;
+    height: inherit;
+
+    .content-header {
+      font-family: "GT Walsheim Pro";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      color: $black;
+      margin-bottom: 1rem;
+      width: 80%;
+    }
+
+    .content-text {
+      width: 80%;
+      font-family: "Proxima Nova";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: $black;
+      margin: 1rem 0;
+    }
+  }
+
+  .flex-img-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    height: max-content;
+
+    .push-up {
+      margin-top: -1rem !important;
+    }
+
+    .push-down {
+      margin-top: 3rem !important;
+    }
+
+    .flex-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .button-section {
+    margin: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flex-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .flex-img-section {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%;
+    height: max-content;
+  }
+  .flex-img {
+    width: 60%;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .content-header {
+    font-family: "GT Walsheim Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 48px;
+    color: $black;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .content-text {
+    width: 100%;
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+    margin: 1rem 0;
+  }
+
+  .companies {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+    gap: 10px;
+    .logo {
+      width: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .flex-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .flex-img-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    height: max-content;
+
+    .push-up {
+      margin-top: 0 !important;
+    }
+
+    .push-down {
+      margin-top: 0 !important;
+    }
+  }
+  .flex-img {
+    width: 60%;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .content-header {
+    font-family: "GT Walsheim Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 48px;
+    color: $black;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .content-text {
+    width: 100%;
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+    margin: 1rem 0;
+  }
+
+  .companies {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+    gap: 10px;
+    .logo {
+      width: 40px;
+    }
+  }
+}

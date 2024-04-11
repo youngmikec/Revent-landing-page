@@ -1,0 +1,34 @@
+<div class="content-wrapper">
+  <div class="container">
+    <div class="flex-layout fade-in">
+      <div class="flex-img-section">
+        <div
+          *ngFor="let service of finSerices; let i = index"
+          [ngClass]="{
+            'push-down': (i % 2 != 0),
+            'push-up': (i % 2 === 0),
+            }"
+        >
+          <app-service-card
+            [title]="service.title"
+            [description]="service.description"
+            [imgSrc]="service.imgSrc"
+          ></app-service-card>
+        </div>
+      </div>
+      <div class="content">
+        <button class="btn btn-pill">We guarantee</button>
+        <h1 class="content-header text-lg">
+          Easy Financial services
+          <span class="text-primary">wherever you go</span>
+        </h1>
+
+        <p class="content-text">
+          Whether you’re at home, at the office, or on the go, you can apply for
+          your loan from anywhere. We will be available to help you every step
+          of the way
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
