@@ -2,6 +2,19 @@
 @import "./assets/styles/variables.scss";
 @import "./assets/styles/keyframes.scss";
 
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/proxima-nova/ProximaNova-Regular.ttf")
+    format("truetype");
+  /* Add additional font formats as needed */
+}
+
+@font-face {
+  font-family: "GT Walsheim Pro";
+  src: url("./assets/fonts/gtwal/GTWalsheimPro-Regular.ttf") format("truetype");
+  /* Add additional font formats as needed */
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -10,8 +23,9 @@ body {
 }
 
 :host {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Proxima Nova", "GT Walsheim Pro", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
   color: #333;
   box-sizing: border-box;
