@@ -23,8 +23,6 @@ export class LandingPageComponent {
     const sectionElement: any = document.querySelector('.flex-layout');
     const sectionPosition = sectionElement.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
-    console.log('sectionPosition', sectionPosition);
-    console.log('windowHeight', windowHeight);
 
     if (sectionPosition < windowHeight) {
         this.isVisible = true;

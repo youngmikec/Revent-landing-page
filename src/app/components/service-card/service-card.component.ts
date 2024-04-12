@@ -6,7 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./service-card.component.scss']
 })
 export class ServiceCardComponent {
+  @Input() templateType: string = 'services';
   @Input() imgSrc: string = '';
   @Input() title: string = '';
   @Input() description: string = '';
+
 }

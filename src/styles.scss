@@ -86,6 +86,13 @@ p {
     border: none;
   }
 
+  &.btn-pill-green {
+    border-radius: 50px !important;
+    background-color: #effafe;
+    color: #5eccf3;
+    border: none;
+  }
+
   &.btn-primary {
     background-color: $primary;
     color: $white;
@@ -160,23 +167,25 @@ p {
 }
 .text-lg {
   font-family: "GT Walsheim Pro";
-  font-size: 40px;
+  font-size: 30;
   font-weight: 700;
-  line-height: 60px;
   text-align: left;
 }
 .text-sm {
   font-family: "Proxima Nova";
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 27px;
   text-align: left;
+}
+
+.text-center {
+  text-align: center !important;
 }
 
 /*card app styles*/
 
 .card {
-  all: unset;
+  // all: unset;
   background-color: $white;
   padding: 20px;
   border-radius: 8px;
@@ -195,6 +204,7 @@ p {
     height: max-content;
     width: "100%";
     border-radius: 25px;
+    padding: 2rem auto !important;
   }
 
   &.card-primary {
@@ -213,6 +223,17 @@ p {
   }
   &.card-primary-light {
     background-color: $primary-light;
+  }
+
+  .card-img {
+    width: 100%;
+    min-height: 260px;
+    border-radius: 10px;
+    object-fit: cover;
+    background-color: #c4c4c4;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   .card-icon {
@@ -235,7 +256,6 @@ p {
     font-family: "GT Walsheim Pro";
     font-size: 24px;
     font-weight: 500;
-    line-height: 27.48px;
     text-align: left;
     margin-bottom: 12px;
     margin-top: 5px;
@@ -245,7 +265,6 @@ p {
     font-family: "Proxima Nova";
     font-size: 16px;
     font-weight: 400;
-    line-height: 24px;
     text-align: left;
     text-align: justify;
     margin: 1rem auto;
@@ -293,17 +312,28 @@ p {
 
       .card-title {
         font-size: 18px;
-        line-height: 22px;
         margin-bottom: 8px;
         margin-top: 5px;
       }
       .card-text {
         font-size: 13px;
-        line-height: 18px;
         margin: 1rem auto;
         text-align: justify;
         overflow: hidden;
       }
     }
+  }
+
+  .text-lg {
+    font-family: "GT Walsheim Pro";
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .text-sm {
+    font-family: "Proxima Nova";
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
   }
 }

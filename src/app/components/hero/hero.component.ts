@@ -22,7 +22,6 @@ export class HeroComponent {
     } else {
         this.isVisible = false;
     }
-    console.log(this.isVisible)
 
   }
 

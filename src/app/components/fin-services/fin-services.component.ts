@@ -12,6 +12,7 @@ interface FinService{
   styleUrls: ['./fin-services.component.scss']
 })
 export class FinServicesComponent {
+  templateType: string = 'service'
   finSerices: FinService[] = [
     {
       title: 'Quick & Instant',

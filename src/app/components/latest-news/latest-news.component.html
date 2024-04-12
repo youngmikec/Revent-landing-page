@@ -1,1 +1,20 @@
-<p>latest-news works!</p>
+<div class="container">
+  <div class="info-section">
+    <h1 class="text-lg">Latest News</h1>
+    <p class="text-sm">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo sodales
+      elit quam nisl, amet.
+    </p>
+  </div>
+
+  <div class="news-section">
+    <div *ngFor="let news of newsLists; let i = index">
+      <app-service-card
+        [templateType]="templateType"
+        [title]="news.title"
+        [description]="news.description"
+        [imgSrc]="news.image"
+      ></app-service-card>
+    </div>
+  </div>
+</div>

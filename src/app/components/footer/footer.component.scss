@@ -8,7 +8,7 @@
   margin: 2rem 0;
 
   .footer-links {
-    width: 30%;
+    width: 60%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -30,7 +30,6 @@
       font-style: normal;
       font-weight: 400;
       font-size: 20px;
-      line-height: 24px;
       color: $black;
       margin: 1rem 0;
       text-decoration: none;
@@ -76,16 +75,17 @@
 
   i {
     color: $primary;
-    font-size: 30px;
+    font-size: 24px;
   }
 }
 
 .bottom-text {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .flex-layout {
     display: flex;
     flex-direction: column;
@@ -119,8 +119,7 @@
     font-family: "GT Walsheim Pro";
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
-    line-height: 48px;
+    font-size: 24px;
     color: $black;
     margin-bottom: 1rem;
     width: 100%;
@@ -132,7 +131,6 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
     color: $black;
     margin: 1rem 0;
   }
